@@ -30,6 +30,9 @@ const actions = {
     addPost: async (post) => {
         return await axios.post(`${baseURL}/addAPost`, { post }, resetHead())
     },
+    pigLatin: async (post) => {
+        return await axios.post(`${baseURL}/addAPost`, { post }, resetHead())
+    },
     logIn: async (data) => {
 
         localStorage.setItem('googleTokenId', data.tokenId)

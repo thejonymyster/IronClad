@@ -2,7 +2,21 @@ import React, { useState } from 'react';
 import actions from '../api';
 import humanity from './Home'
 
-function AddPost(props) {
+function latin(str){
+    let arr = str.split(" ")
+    for(let i = 0; i < arr.length; i++){
+        if (["a","A","e","E","i","I","o","O","u","U"].includes(arr[i].charAt(0))){
+            arr[i] += "ay"
+        }else{
+            let swipe = arr[i].charAt(0)
+            arr[i] = arr[i].slice(1) + swipe + "ay"
+        }
+    }
+    humanity = "A pig"
+    return arr.join(" ")
+}
+
+function PigLatin(props) {
 
     let [post, setPost] = useState('')
 
@@ -10,7 +24,7 @@ function AddPost(props) {
         //Send it to the server! 
         event.preventDefault()
 
-        actions.addPost(post)
+        actions.pigLatin(post)
             .then(newPost => {
                 console.log('new post!', newPost)
                 //Redirect to all-posts page
@@ -20,13 +34,12 @@ function AddPost(props) {
 
     const handleChange = (event) => {
         //On typing setPost 
-        humanity = "A human"
-        setPost(event.target.value)
+        setPost(latin(event.target.value))
     }
 
     return (
         <>
-            <h3>Post Like A Human</h3>
+            <h3>Post Like A Pig</h3>
 
             <form onSubmit={handleSubmit}>
                 <input onChange={handleChange} type="text" name="post" placeholder="Input" />
@@ -37,4 +50,4 @@ function AddPost(props) {
     );
 }
 
-export default AddPost;
+export default PigLatin;
