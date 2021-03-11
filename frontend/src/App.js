@@ -26,13 +26,13 @@ function App() {
   return (
     <div className="App">
 
-      <h1>Cool Cat Website</h1>
+      <h1>Zooble Translate</h1>
       <h4>Logged in as {user.email}</h4>
       <nav>
         <Link to="/">Homepage</Link>
         <Link to="all-posts">All Posts</Link>
         <Link to="add-posts">Add Post</Link>
-        <Link to="pig-latin">Pig Latin</Link>
+        <Link to="pig-latin">Languages</Link>
         {!user.email ? <Link to="/auth">Log in</Link> : <Link to="/profile">Profile</Link>}
 
 
