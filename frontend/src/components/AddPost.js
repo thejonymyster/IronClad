@@ -20,8 +20,8 @@ function AddPost(props) {
 
     const handleChange = (event) => {
         //On typing setPost 
-        humanity = "A human"
-        setPost(event.target.value)
+        // humanity = "A human"
+        setPost("👤: " + event.target.value)
     }
 
     return (

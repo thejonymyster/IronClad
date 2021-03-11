@@ -12,11 +12,36 @@ function latin(str){
             arr[i] = arr[i].slice(1) + swipe + "ay"
         }
     }
-    humanity = "A pig"
-    return arr.join(" ")
+    return "🐷: " + arr.join(" ")
 }
 
-function PigLatin(props) {
+function ghost(str){
+    let arr = str.split("")
+    for(let i = 0; i < arr.length; i++){
+        if (["o","O"].includes(arr[i])){
+            arr[i] = "o O o O"
+        }
+    }
+    return "ghost emoji: " + arr.join(" ")
+}
+
+function alien(str){
+    let arr = str.split("")
+    for(let i = 0; i < arr.length; i++){
+        if (["a","e","i","o","u"].includes(arr[i])){
+            arr[i] = "X"
+        }
+        if (["A","E","I","O","U"].includes(arr[i])){
+            arr[i] = "x"
+        }
+        if ([" "].includes(arr[i])){
+            arr[i] = "."
+        }
+    }
+    return "alien emoji: " + arr.join("")
+}
+
+function PigLatin(props, propHumanity) {
 
     let [post, setPost] = useState('')
 
@@ -34,12 +59,18 @@ function PigLatin(props) {
 
     const handleChange = (event) => {
         //On typing setPost 
-        setPost(latin(event.target.value))
+        // humanity = "A pig"
+        if (propHumanity = "Human");{
+            setPost("👤: " + event.target.value)
+        }
+        if (propHumanity = "Pig");{
+            setPost(latin(event.target.value))
+        }
     }
 
     return (
         <>
-            <h3>Post Like A Pig</h3>
+            <h3>Post Like A Undefined</h3>
 
             <form onSubmit={handleSubmit}>
                 <input onChange={handleChange} type="text" name="post" placeholder="Input" />
