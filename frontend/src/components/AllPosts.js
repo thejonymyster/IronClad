@@ -23,7 +23,7 @@ function AllPosts(props) {
             return (
                 <div>
                 <p>Post By {evaluateUser(post.post)}</p>
-                <li key={post._id}><img url={"evaluate"} alt={evaluateUser(post.post) + " image" } /> {post.post.slice(3)}</li>
+                <li key={post._id}><img url={"evaluate"} alt={evaluateUser(post.post) + " image" } /> {post.post}</li>
                 </div>
             )
         })
