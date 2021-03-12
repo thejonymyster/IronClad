@@ -22,7 +22,7 @@ function AllPosts(props) {
         return posts.map(post => {
             return (
                 <div>
-                <p>Post By {evaluateUser(post.post)}</p>
+                {/* <p>Post By {evaluateUser(post.post)}</p> */}
                 <li key={post._id}><img url={"evaluate"} alt={evaluateUser(post.post) + " image" } /> {post.post}</li>
                 </div>
             )
