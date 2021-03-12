@@ -2,6 +2,12 @@ import React, { useEffect, useState } from 'react';
 import actions from '../api'
 
 
+function evaluateUser(str) {
+    if (str.charAt(0) == ""){return "Pig"}
+    return "unidentified species"
+}
+
+
 function AllPosts(props) {
     const [posts, setPosts] = useState([])
 
@@ -12,11 +18,13 @@ function AllPosts(props) {
 
     }, [])
 
-
     const showPosts = () => {
         return posts.map(post => {
             return (
-                <li key={post._id}>{post.post}</li>
+                <div>
+                <p>Post By {evaluateUser(post.post)}</p>
+                <li key={post._id}><img url={"evaluate"} alt={evaluateUser(post.post) + " image" } /> {post.post.slice(3)}</li>
+                </div>
             )
         })
     }
