@@ -80,6 +80,9 @@ function PigLatin(props, propHumanity) {
         if (propHumanity === "Pig") {
             setPost(latin(event.target.value))
         }
+        if (propHumanity === "Hog") {
+            setPost(hoglatin(event.target.value))
+        }
     }
 
     return ( <div>
