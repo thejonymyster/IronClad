@@ -41,6 +41,11 @@
 
 import React, { useState } from 'react';
 import actions from '../api'
+import propAnimal from '../App.js'
+
+function animal(str){
+    return str
+}
 
 function AddPost(props) {
 
@@ -60,7 +65,7 @@ function AddPost(props) {
 
     const handleChange = (event) => {
         //On typing setPost 
-        setPost(event.target.value)
+        setPost("P" + animal(event.target.value))
     }
 
     return (
@@ -68,6 +73,12 @@ function AddPost(props) {
             <h3>Make a AddPost</h3>
 
             <form onSubmit={handleSubmit}>
+
+                <select value = "dropdown">
+                    <option value = "P" selected>Pig Latin</option>
+                    <option value = "C">Cat Meow</option>
+                    <option value = "D">Dog Bark</option>
+                </select>
                 <input onChange={handleChange} type="text" name="post" placeholder="Make a post..." />
                 <button>📬</button>
             </form>

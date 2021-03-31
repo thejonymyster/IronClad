@@ -13,12 +13,12 @@ import pandapng from '../img/panda.png'
 
 
 function evaluateUser(str) {
-    if (str.charAt(0) == "🐷"){return "Pig"}
+    if (str.charAt(0) == "P"){return "Pig"}
     return "unidentified species"
 }
 
 function evaluateImage(str) {
-    if (str.charAt(0) == "🐷"){return pigpng}
+    if (str.charAt(0) == "P"){return pigpng}
     return "unidentifiedpng"
 }
 
@@ -38,7 +38,7 @@ function AllPosts(props) {
             return (
                 <div>
                 <p>Post By {evaluateUser(post.post)}</p>
-                <li key={post._id}><img src={pigpng} alt={evaluateUser(post.post) + " image" } /> {post.post}</li>
+                <li key={post._id}><img src={evaluateImage(post.post)} alt={evaluateUser(post.post) + " image" } /> {post.post.slice(1)}</li>
                 </div>
             )
         })
