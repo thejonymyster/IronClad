@@ -16,7 +16,7 @@ function Profile(props) {
     const showPosts = () => {
         return myPosts.map(post => {
             return (
-                <li key={post._id}>{post.post}</li>
+                <li key={post._id}>{post.post.slice(1)}</li>
             )
         })
     }
