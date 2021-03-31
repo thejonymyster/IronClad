@@ -42,7 +42,7 @@ function App() {
       <Switch>
         <Route exact path="/" render={(props) => <Home {...props} />} />
         <Route exact path="/all-posts" render={(props) => <AllPosts {...props} />} />
-        <Route exact path="/add-posts" render={(props) => <PigLatin propHumanity="Human" {...props} />} />
+        <Route exact path="/add-posts" render={(props) => <AddPost propHumanity="Human" {...props} />} />
         <Route exact path="/pig-latin" render={(props) => <PigLatin propHumanity="Pig" {...props} />} />
         <Route exact path="/auth" render={(props) => <Auth setUser={setUser} {...props} />} />
         <Route exact path="/profile" render={(props) => <Profile user={user} {...props} />} />
