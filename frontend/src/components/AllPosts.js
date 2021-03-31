@@ -1,10 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import actions from '../api'
+import pigpng from '../img/pig.png'
+import chickenpng from '../img/chicken.png'
+import llamapng from '../img/llama.png'
+import horsepng from '../img/horse.png'
+import dogpng from '../img/dog.png'
+import catpng from '../img/cat.png'
+import batpng from '../img/bat.png'
+import ferretpng from '../img/ferret.png'
+import slothpng from '../img/sloth.png'
+import pandapng from '../img/panda.png'
 
 
 function evaluateUser(str) {
     if (str.charAt(0) == ""){return "Pig"}
     return "unidentified species"
+}
+
+function evaluateImage(str) {
+    if (str.charAt(0) == ""){return pigpng}
+    return "unidentifiedpng"
 }
 
 
@@ -23,7 +38,7 @@ function AllPosts(props) {
             return (
                 <div>
                 <p>Post By {evaluateUser(post.post)}</p>
-                <li key={post._id}><img url={"./img/pig.png"} alt={evaluateUser(post.post) + " image" } /> {post.post}</li>
+                <li key={post._id}><img src={pigpng} alt={evaluateUser(post.post) + " image" } /> {post.post}</li>
                 </div>
             )
         })
