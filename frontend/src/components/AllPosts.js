@@ -39,7 +39,7 @@ function AllPosts(props) {
             return (
                 <div>
                 <p>Post By {evaluateUser(post.post)}</p>
-                <li key={post._id}><img class="avatar" src={evaluateImage(post.post)} alt={evaluateUser(post.post) + " image" } /> {post.post.slice(1)}</li>
+                <li class="boxme" key={post._id}><img class="avatar" src={evaluateImage(post.post)} alt={evaluateUser(post.post) + " image" } /> {post.post.slice(1)}</li>
                 </div>
             )
         })
@@ -49,7 +49,7 @@ function AllPosts(props) {
     return (
         <>
             <h3>All Posts</h3>
-            <ul>{showPosts()}</ul>
+            <ul class="showall">{showPosts()}</ul>
 
         </>
     );
