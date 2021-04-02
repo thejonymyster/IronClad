@@ -1,7 +1,4 @@
-.li {
-  background-color: #282c34;
-  color: #282c34;
-}
+
 
 .App {
   text-align: center;
@@ -40,4 +37,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.avatar {
+  width: 100px;
 }

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import actions from '../api'
-import pigpng from '../img/pig.png'
+import actions from '../api';
+import pigpng from '../img/pig.png';
+import '../App.css';
 import chickenpng from '../img/chicken.png'
 import llamapng from '../img/llama.png'
 import horsepng from '../img/horse.png'
@@ -38,7 +39,7 @@ function AllPosts(props) {
             return (
                 <div>
                 <p>Post By {evaluateUser(post.post)}</p>
-                <li key={post._id}><img src={evaluateImage(post.post)} alt={evaluateUser(post.post) + " image" } /> {post.post.slice(1)}</li>
+                <li key={post._id}><img class="avatar" src={evaluateImage(post.post)} alt={evaluateUser(post.post) + " image" } /> {post.post.slice(1)}</li>
                 </div>
             )
         })

@@ -41,6 +41,8 @@
 
 import React, { useState } from 'react';
 import actions from '../api'
+import DropdownHelper from './DropdownHelper.js'
+import ReactDOM from 'react-dom'
 import propAnimal from '../App.js'
 
 function animal(str){
@@ -72,7 +74,11 @@ function AddPost(props) {
         <>
             <h3>Make a AddPost</h3>
 
-            <form onSubmit={handleSubmit}>
+            <div id="dropdown"></div>
+
+            <DropdownHelper />
+
+            {/* <form onSubmit={handleSubmit}>
 
                 <select value = "dropdown">
                     <option value = "P" selected>Pig Latin</option>
@@ -81,10 +87,11 @@ function AddPost(props) {
                 </select>
                 <input onChange={handleChange} type="text" name="post" placeholder="Make a post..." />
                 <button>📬</button>
-            </form>
+            </form> */}
 
         </>
-    );
+    )
+    
 }
 
 export default AddPost;
