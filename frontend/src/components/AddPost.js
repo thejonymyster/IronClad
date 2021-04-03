@@ -72,13 +72,13 @@ function AddPost(props) {
 
     return (
         <>
-            <h3>Make a AddPost</h3>
+            <h2>Make a AddPost</h2>
 
             <div id="dropdown"></div>
 
             <DropdownHelper />
 
-            {/* <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
 
                 <select value = "dropdown">
                     <option value = "P" selected>Pig Latin</option>
@@ -87,7 +87,7 @@ function AddPost(props) {
                 </select>
                 <input onChange={handleChange} type="text" name="post" placeholder="Make a post..." />
                 <button>📬</button>
-            </form> */}
+            </form>
 
         </>
     )

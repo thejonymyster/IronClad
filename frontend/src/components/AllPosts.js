@@ -37,7 +37,7 @@ function AllPosts(props) {
     const showPosts = () => {
         return posts.map(post => {
             return (
-                <div>
+                <div class="alignposter">
                 <p>Post By {evaluateUser(post.post)}</p>
                 <div class="boxme" key={post._id}><img class="avatar" src={evaluateImage(post.post)} alt={evaluateUser(post.post) + " image" } /> {post.post.slice(1)}</div>
                 </div>
@@ -48,7 +48,7 @@ function AllPosts(props) {
 
     return (
         <>
-            <h3>All Posts</h3>
+            <h2>All Posts</h2>
             <div class="showall">{showPosts()}</div>
 
         </>

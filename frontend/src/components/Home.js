@@ -5,11 +5,11 @@ import React from 'react';
 function Home(props) {
     return (
         <>
-            <h3>Welcome to Zooble Translate</h3>
+            <h2>Welcome to Zooble Translate</h2>
             {/* <p>You are: {humanity}</p> */}
             <p>This is a website that allows you to post messages in a variety of animal languages.</p>
 
-            <div>instructions go here</div>
+            <div>How to use our site:</div>
         </>
     );
 }

@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import logo from './logo.svg';
 import './App.css';
 import Home from './components/Home'
 import AddPost from './components/AddPost'
@@ -9,6 +8,7 @@ import Auth from './components/Auth'
 import Profile from './components/Profile'
 import actions from './api'
 import { Switch, Route, Link } from 'react-router-dom'
+import LanguageList from './components/LanguageList';
 
 
 
@@ -30,9 +30,10 @@ function App() {
       <h4>Logged in as {user.email}</h4>
       <nav>
         <Link to="/">Homepage</Link>
+        <Link to="/Languages">Languages</Link>
         <Link to="all-posts">All Posts</Link>
         <Link to="add-posts">Add Post</Link>
-        <Link to="pig-latin">Languages</Link>
+        <Link to="pig-latin">Postremovelater</Link>
         {!user.email ? <Link to="/auth">Log in</Link> : <Link to="/profile">Profile</Link>}
 
 
@@ -46,6 +47,7 @@ function App() {
         <Route exact path="/pig-latin" render={(props) => <PigLatin propHumanity="Pig" {...props} />} />
         <Route exact path="/auth" render={(props) => <Auth setUser={setUser} {...props} />} />
         <Route exact path="/profile" render={(props) => <Profile user={user} {...props} />} />
+        <Route exact path="/Languages" render={(props) => <LanguageList {...props} />} />
       </Switch>
 
     </div>

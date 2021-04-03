@@ -48,11 +48,10 @@
 .showall {
   display: flex;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
   flex-direction: column;
   border-width: 100px;
   border-color: green;
-  padding-left: 10px;
   flex-wrap: wrap;
   height: 1000px;
 }
@@ -73,4 +72,33 @@
 .alignposter {
   display: flex;
   align-items: left;
+}
+
+.centeredlist {
+  padding: 10px 10px 10px 10px;
+  background-color: white;
+  box-shadow: #282c34;
+  max-width: 800px;
+}
+
+.flexcenter {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.twoboxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+}
+
+.langbox {
+  max-width: 40%;
+  background: rgb(232, 255, 187);
+  padding: 10px;
+  border: thin solid black;
+  display: flex;
+  align-items: center;
 }
