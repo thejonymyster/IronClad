@@ -132,14 +132,25 @@ function conStartRegex(str){
   function horseRegex(str){
     return str.toUpperCase().replace(/AGE?\b|E\b/g,"EIGH").replace(/(?<![OU])O(?![OU])/g,"OU").replace(/(?<![OU])U(?![OU])/g,"UO").replace(/G(?=Y)/,"GH")
   }
+
+  function LanguageWizard(msg,lng){
+    switch(lng) {
+      case "P":
+        return piglatin(msg)
+        break;
+      case "C":
+        return catmeow(msg)
+        break;
+      case "B":
+        return batRegex(msg)
+        break;
+      default:
+        return msg
+    } 
+  }
   
-module.exports = {
-  piglatin,
-  catmeow,
-  batRegex,
-  slothRegex,
-  chickenScratch,
-  llamaSpit,
-  ferretWheel,
-  horseRegex
-}
+// module.exports = {
+//   LanguageWizard
+// }
+
+export default LanguageWizard;

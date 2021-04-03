@@ -45,7 +45,7 @@ import DropdownHelper from './DropdownHelper.js'
 import ReactDOM from 'react-dom'
 import propAnimal from '../App.js'
 import { piglatin } from './RegexWizard';
-require('./RegexWizard')
+import Test from '../class/Test'
 
 function animal(str){
     return str
@@ -55,6 +55,7 @@ function AddPost(props) {
 
     let [post, setPost] = useState('')
     let [title, setTitle] = useState('')
+    let [language, setLanguage] = useState('')
 
     const handleSubmit = (event) => {
         //Send it to the server! 
@@ -75,7 +76,10 @@ function AddPost(props) {
 
     return (
         <>
+
             <h2>Make a AddPost</h2>
+
+            <Test/>
 
             {/* <div id="dropdown"></div>
 
@@ -92,15 +96,15 @@ function AddPost(props) {
                 <button>📬</button>
             </form> */}
 
-            <div>
-                <select value = "dropdown">
+            {/* <div>
+                <select value = "dropdown" onChange={event => setLanguage(event.target.value)}>
                     <option value = "P">Pig Latin</option>
                     <option value = "C">Cat Meow</option>
                     <option value = "B">Bat Banter</option>
                 </select>
                 <input name="post" autoComplete="off" placeholder="Make a post..." onChange={event => setTitle(event.target.value)}></input>
-                <p>{title}</p>
-            </div>
+                <p>{language}</p>
+            </div> */}
 
         </>
     )
