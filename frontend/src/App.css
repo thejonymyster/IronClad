@@ -3,6 +3,7 @@
 .App {
   text-align: center;
   background-color: #7777ff;
+  background-color: #eaeaea;
 }
 
 .App-logo {
@@ -51,15 +52,25 @@
   flex-direction: column;
   border-width: 100px;
   border-color: green;
+  padding-left: 10px;
+  flex-wrap: wrap;
+  height: 1000px;
 }
 
 .boxme {
   display: flex;
   align-items: baseline;
-  border-radius: 1px;
+  border-radius: 5px;
   padding: 10px 10px 5px 10px;
   border-color: green;
   background-color: white;
   background: white;
   box-shadow: #282c34;
+  filter: drop-shadow(10px 10px 4px #cccccc);
+  min-width: 400px;
+}
+
+.alignposter {
+  display: flex;
+  align-items: left;
 }
