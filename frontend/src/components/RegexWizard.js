@@ -1,3 +1,5 @@
+
+
 function conStartRegex(str){
     if (str.charAt(0) === str.charAt(0).toUpperCase() && str.slice(1) === str.slice(1).toLowerCase()){
       let arr = str.replace(/\b([^aeiou]+)([a-z]*)\b/gi, "$2$1ay").toLowerCase().split("")
@@ -131,4 +133,13 @@ function conStartRegex(str){
     return str.toUpperCase().replace(/AGE?\b|E\b/g,"EIGH").replace(/(?<![OU])O(?![OU])/g,"OU").replace(/(?<![OU])U(?![OU])/g,"UO").replace(/G(?=Y)/,"GH")
   }
   
-  
+module.exports = {
+  piglatin,
+  catmeow,
+  batRegex,
+  slothRegex,
+  chickenScratch,
+  llamaSpit,
+  ferretWheel,
+  horseRegex
+}

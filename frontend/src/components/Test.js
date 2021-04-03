@@ -7,6 +7,7 @@ function Test () {
     return (
         <div>
             <input onChange={event => setTitle(event.target.value)}></input>
+            <p>{title}</p>
         </div>
     )
 }
