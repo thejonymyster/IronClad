@@ -15,11 +15,13 @@ import pandapng from '../img/panda.png'
 
 function evaluateUser(str) {
     if (str.charAt(0) == "P"){return "Pig"}
+    if (str.charAt(0) == "C"){return "Cat"}
     return "unidentified species"
 }
 
 function evaluateImage(str) {
     if (str.charAt(0) == "P"){return pigpng}
+    if (str.charAt(0) == "C"){return catpng}
     return "unidentifiedpng"
 }
 

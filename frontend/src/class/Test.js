@@ -29,6 +29,11 @@ class Test extends React.Component {
     }
 
     handleSubmit(event) {
+        if(!this.state.Message){
+            alert("TYPE A POST IN FIRST, SILLY!!")
+            return
+        }
+
         event.preventDefault()
 
         actions.addPost(this.state.Language + LanguageWizard(this.state.Message,this.state.Language))
