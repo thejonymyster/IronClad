@@ -49,7 +49,7 @@ class Test extends React.Component {
             <form onSubmit={this.handleSubmit}>
                 <label>
                     <select value={this.state.value} onChange={event => this.handleDropChange(event)}>
-                        <option value = "P" selected>Pig Latin</option>
+                        <option value = "P">Pig Latin</option>
                         <option value = "C">Cat Meow</option>
                         <option value = "B">Bat Banter</option>
                         <option value = "S">Sloth Crawl</option>
@@ -59,8 +59,10 @@ class Test extends React.Component {
                         <option value = "H">Horse Code</option>
                     </select>
                     <input onChange={event => this.handleInputChange(event)}></input>
-                    <p>Preview: {LanguageWizard(this.state.Message,this.state.Language)}</p>
-                    <button>SUBMIT! SUBMIT TO THE COMPUTER OVERLORD!</button>
+                    <button>Submit!</button>
+
+                    <p>Preview:</p><p>{LanguageWizard(this.state.Message,this.state.Language)}</p>
+                    <div class="spacer"></div>
                 </label>
             </form>
         )

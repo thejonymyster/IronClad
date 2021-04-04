@@ -29,11 +29,11 @@ function App() {
             <h1>Zooble Translate</h1>
       <h4>Logged in as {user.email}</h4>
       <nav>
-        <Link to="/">Homepage</Link>
-        <Link to="/Languages">Languages</Link>
-        <Link to="all-posts">All Posts</Link>
-        <Link to="add-posts">Add Post</Link>
-        {!user.email ? <Link to="/auth">Log in</Link> : <Link to="/profile">Profile</Link>}
+        <Link class="links" to="/">Homepage</Link>
+        <Link class="links" to="/Languages">Languages</Link>
+        <Link class="links" to="all-posts">All Posts</Link>
+        <Link class="links" to="add-posts">Add Post</Link>
+        {!user.email ? <Link class="links" to="/auth">Log in</Link> : <Link class="links" to="/profile">Profile</Link>}
 
 
       </nav>

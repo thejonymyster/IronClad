@@ -2,8 +2,7 @@
 
 .App {
   text-align: center;
-  background-color: #7777ff;
-  background-color: #eaeaea;
+  background-color: #b1ff9e;
 }
 
 .App-logo {
@@ -50,18 +49,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   border-width: 100px;
   border-color: green;
   flex-wrap: wrap;
-  height: 1000px;
 }
 
 .boxme {
   display: flex;
   flex-direction: row;
   align-items: space;
-  justify-content: space-evenly;
+  justify-content: left;
   border-radius: 5px;
   padding: 10px 10px 5px 10px;
   border-color: green;
@@ -81,7 +79,9 @@
   padding: 10px 10px 10px 10px;
   background-color: white;
   box-shadow: #282c34;
+  filter: drop-shadow(10px 10px 4px #cccccc);
   max-width: 800px;
+  height: 1670px;
 }
 
 .flexcenter {
@@ -113,13 +113,39 @@
 }
 
 .postpost {
-  border: thin solid red;
+  /* border: thin solid red; */
   display: flex;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
+  width: 300px;
 }
 
 .actualpost {
   padding: 10px;
+  /* border: thin solid black; */
+}
+
+.spacer {
+  height: 300px;
+}
+
+.links {
   border: thin solid black;
+  padding: 5px;
+  background: white;
+}
+
+.alignprofile {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-left: 100px;
+  /* border: thin solid black; */
+  width: 60%;
+}
+
+.centerprofile {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
