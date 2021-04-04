@@ -50,13 +50,13 @@ function AllPosts(props) {
 
     const showPosts = () => {
 
-        let arr2 = posts
+        // let arr = []
+        // posts.forEach((x, i) => (arr[i] = x))
+        // arr = arr.reverse()
 
-        let arr = arr2.reverse()
+        // let arr = new Array(...posts).reverse()
 
-        console.log(posts)
-
-        return arr.map(post => {
+        return new Array(...posts).reverse().map(post => {
             return (
                 <div class="alignposter">
                     <div class="posterpost">
