@@ -29,8 +29,8 @@ class Test extends React.Component {
     }
 
     handleSubmit(event) {
-        if(!this.state.Message){
-            alert("TYPE A POST IN FIRST, SILLY!!")
+        if(!this.state.Message.replace(/ /g,"")){
+            alert("Please, don't leave the message box empty! ^_^;")
             return
         }
 
@@ -52,6 +52,11 @@ class Test extends React.Component {
                         <option value = "P" selected>Pig Latin</option>
                         <option value = "C">Cat Meow</option>
                         <option value = "B">Bat Banter</option>
+                        <option value = "S">Sloth Crawl</option>
+                        <option value = "K">Chicken Scratch</option>
+                        <option value = "L">Llama Spit</option>
+                        <option value = "F">Ferret Wheel</option>
+                        <option value = "H">Horse Code</option>
                     </select>
                     <input onChange={event => this.handleInputChange(event)}></input>
                     <p>Preview: {LanguageWizard(this.state.Message,this.state.Language)}</p>

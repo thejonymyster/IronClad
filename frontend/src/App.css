@@ -43,6 +43,7 @@
 
 .avatar {
   width: 100px;
+  height: 100px;
 }
 
 .showall {
@@ -58,7 +59,9 @@
 
 .boxme {
   display: flex;
-  align-items: baseline;
+  flex-direction: row;
+  align-items: space;
+  justify-content: space-evenly;
   border-radius: 5px;
   padding: 10px 10px 5px 10px;
   border-color: green;
@@ -66,12 +69,12 @@
   background: white;
   box-shadow: #282c34;
   filter: drop-shadow(10px 10px 4px #cccccc);
-  min-width: 400px;
+  width: 400px;
 }
 
 .alignposter {
   display: flex;
-  align-items: left;
+  align-items: baseline;
 }
 
 .centeredlist {
@@ -101,4 +104,22 @@
   border: thin solid black;
   display: flex;
   align-items: center;
+}
+
+.posterpost {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.postpost {
+  border: thin solid red;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.actualpost {
+  padding: 10px;
+  border: thin solid black;
 }

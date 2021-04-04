@@ -30,7 +30,7 @@ function conStartRegex(str){
         arr[i] = conStartRegex(arr[i].split("").filter(a => ![`'`,`-`].includes(a)).join(""))
       }
     }
-    return arr.join(" ")
+    return arr.join(" ").replace(/(?<![A-Za-z])(a)(?= [AEIOUaeiou])/g,"an").replace(/(?<![A-Za-z])(A)(?= [AEIOUaeiou])/g,"An")
   }
   
   function slothRegex(str){
@@ -38,7 +38,7 @@ function conStartRegex(str){
   }
   
   function catmeow(str){
-    return str.toLowerCase().replace(/(wr)|([rl])/g,"w").replace(/([:=;])(.{0,}?)\)/g,"$1$23").replace(/eow|(ow)/g,"eow").replace(/\bn\B/g,"ny")
+    return str.toLowerCase().replace(/(w[rh])|([rl])/g,"w").replace(/([:=;])(.{0,}?)\)/g,"$1$23").replace(/eow|(ow)/g,"eow").replace(/\bn\B/g,"ny")
   }
   
   function batRegex(str){
@@ -143,6 +143,21 @@ function conStartRegex(str){
         break;
       case "B":
         return batRegex(msg)
+        break;
+      case "S":
+        return slothRegex(msg)
+        break;
+      case "K":
+        return chickenScratch(msg)
+        break;
+      case "L":
+        return llamaSpit(msg)
+        break;
+      case "F":
+        return ferretWheel(msg)
+        break;
+      case "H":
+        return horseRegex(msg)
         break;
       default:
         return msg
