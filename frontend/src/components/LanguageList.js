@@ -13,7 +13,7 @@ function LanguageList(props) {
 
                     <div class="boxlistitem">
                         <h4>Pig Latin</h4>
-                        <p>The most famous of all animalese languages, something something.</p>
+                        <p>The most famous of all animalese languages, but oddly enough, one often used to obscure information.</p>
                         <div class="titleandboxes">
                             <p>Example</p>
                             <div class="twoboxes">
@@ -25,7 +25,7 @@ function LanguageList(props) {
 
                     <div class="boxlistitem">
                         <h4>Cat Meow</h4>
-                        <p>A relaxed feline language of something something</p>
+                        <p>A relaxed feline language of cute sounds and meows. Purrecious.</p>
                         <div class="titleandboxes">
                             <p>Example</p>
                             <div class="twoboxes">
@@ -37,7 +37,7 @@ function LanguageList(props) {
 
                     <div class="boxlistitem">
                         <h4>Bat Banter</h4>
-                        <p>Blurb</p>
+                        <p>The language of the upside-down, cave-dwelling, vampire bat! Or maybe just a normal bat.</p>
                         <div class="titleandboxes">
                             <p>Example</p>
                             <div class="twoboxes">
@@ -85,7 +85,7 @@ function LanguageList(props) {
 
                     <div class="boxlistitem">
                         <h4>Ferret Wheel</h4>
-                        <p>A silly little language, something something</p>
+                        <p>A silly little language, for these playful creatures. Bigger words are often harder to translate by hand.</p>
                         <div class="titleandboxes">
                             <p>Example</p>
                             <div class="twoboxes">
@@ -97,7 +97,7 @@ function LanguageList(props) {
 
                     <div class="boxlistitem">
                         <h4>Horse Code</h4>
-                        <p>Horse</p>
+                        <p>Horse language. No further comment.</p>
                         <div class="titleandboxes">
                             <p>Example</p>
                             <div class="twoboxes">
