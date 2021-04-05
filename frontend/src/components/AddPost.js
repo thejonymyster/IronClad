@@ -77,7 +77,7 @@ function AddPost(props) {
     return (
         <>
 
-            <h2>Make a AddPost</h2>
+            <h2>Send a message!</h2>
 
             <Test/>
 

@@ -123,6 +123,8 @@
 .actualpost {
   padding: 10px;
   /* border: thin solid black; */
+  max-width: 280px;
+  word-wrap: break-word;
 }
 
 .spacer {
@@ -148,4 +150,20 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+.tutorial {
+  background: white;
+  max-width: 70vw;
+  filter: drop-shadow(10px 10px 4px #cccccc);
+}
+
+.tutorial .spacer {
+  height: 30px;
+}
+
+.tutorial img {
+  max-height: 200px;
+  border: thin solid black;
+  filter: drop-shadow(10px 10px 4px #eeeeee);
 }

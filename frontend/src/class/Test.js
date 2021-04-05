@@ -26,11 +26,17 @@ class Test extends React.Component {
 
     handleInputChange(event) {
         this.setState({Message: event.target.value})
+        if (this.state.Message.length > 200){alert("Message is too long!")}
     }
 
     handleSubmit(event) {
         if(!this.state.Message.replace(/ /g,"")){
             alert("Please, don't leave the message box empty! ^_^;")
+            return
+        }
+
+        if(this.state.Message.length > 200){
+            alert("Message is too long! No one wants to read your novel ;)")
             return
         }
 

@@ -31,8 +31,8 @@ function App() {
       <nav>
         <Link class="links" to="/">Homepage</Link>
         <Link class="links" to="/Languages">Languages</Link>
-        <Link class="links" to="all-posts">All Posts</Link>
-        <Link class="links" to="add-posts">Add Post</Link>
+        <Link class="links" to="all-posts">All Messages</Link>
+        <Link class="links" to="add-posts">Send a Message</Link>
         {!user.email ? <Link class="links" to="/auth">Log in</Link> : <Link class="links" to="/profile">Profile</Link>}
 
 
